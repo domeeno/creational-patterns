@@ -1,16 +1,17 @@
 package com.create.builder;
 
-import org.xml.sax.ext.LexicalHandler;
-
 import java.util.ArrayList;
+
+// This Builder is a Lego city Builder. This class' goal is to construct a City object. This city can have multiple
+// shops, parks, institutions, restaurants, theaters. Once you construct an entity you can't deconstruct it from the city.
 
 public class LegoCity {
     public static class Builder {
-        private ArrayList<String> shops;
-        private ArrayList<String> parks;
-        private ArrayList<String> institutions;
-        private ArrayList<String> restaurants;
-        private ArrayList<String> theaters;
+        private ArrayList<String> shops = new ArrayList<>();
+        private ArrayList<String> parks = new ArrayList<>();
+        private ArrayList<String> institutions = new ArrayList<>();
+        private ArrayList<String> restaurants = new ArrayList<>();
+        private ArrayList<String> theaters = new ArrayList<>();
 
         public Builder() {
 
