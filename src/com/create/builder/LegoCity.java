@@ -1,5 +1,7 @@
 package com.create.builder;
 
+import com.create.prototype.CityHabitant;
+
 import java.util.ArrayList;
 
 // This Builder is a Lego city Builder. This class' goal is to construct a City object. This city can have multiple
@@ -12,7 +14,8 @@ public class LegoCity {
         private ArrayList<String> institutions = new ArrayList<>();
         private ArrayList<String> restaurants = new ArrayList<>();
         private ArrayList<String> theaters = new ArrayList<>();
-
+        private ArrayList<CityHabitant> habitants = new ArrayList<>();
+        
         public Builder() {
 
         }
@@ -43,6 +46,11 @@ public class LegoCity {
 
         public Builder theaters(String theater) {
             this.theaters.add(theater);
+            return this;
+        }
+
+        public Builder habitants(CityHabitant habitant) {
+            this.habitants.add(habitant);
             return this;
         }
     }
