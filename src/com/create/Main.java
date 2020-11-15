@@ -1,6 +1,6 @@
 package com.create;
 
-import com.create.connection.MySQLConnection;
+import com.create.singleton.connection.MySQLConnection;
 
 public class Main {
 
