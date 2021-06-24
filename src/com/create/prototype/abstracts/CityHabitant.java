@@ -1,35 +1,17 @@
-package com.create.prototype;
+package com.create.prototype.abstracts;
 
 import com.create.builder.LegoCity;
 import com.create.prototype.enums.Gender;
 
-import java.util.ArrayList;
-
-public class CityHabitant implements Cloneable{
+public abstract class CityHabitant implements Cloneable{
     private String name;
     private Boolean isEmployed;
     private int age;
     private Gender gender;
     private LegoCity cityOrigin;
 
-    public CityHabitant(String name, Boolean isEmployed, int age, Gender gender, LegoCity cityOrigin) {
-        this.name = name;
-        this.isEmployed = isEmployed;
-        this.age = age;
-        this.gender = gender;
-        this.cityOrigin = cityOrigin;
-    }
-
-    public CityHabitant() {
-    }
-
-    public CityHabitant clone()  {
-        try {
-            return (CityHabitant) super.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public Object clone() throws  CloneNotSupportedException {
+        return super.clone();
     }
 
     public String getName() {

@@ -1,6 +1,6 @@
 package com.create.builder;
 
-import com.create.prototype.CityHabitant;
+import com.create.prototype.abstracts.CityHabitant;
 
 import java.util.ArrayList;
 

@@ -1,11 +1,9 @@
 package com.create;
 
 import com.create.builder.LegoCity;
-import com.create.prototype.CityHabitant;
-import com.create.prototype.enums.Gender;
+import com.create.prototype.citizen.Teacher;
+import com.create.prototype.repository.Registry;
 import com.create.singleton.connection.MySQLConnection;
-
-import java.util.ArrayList;
 
 public class Main {
 
@@ -25,10 +23,23 @@ public class Main {
         System.out.println(legoCity.getTheaters());
 
         //Prototype
-        CityHabitant cityHabitant = new CityHabitant("Dorothy", true, 23, Gender.FEMALE, legoCity);
-        CityHabitant cityHabitant1 = cityHabitant.clone();
-        System.out.println("Original habitant age: " + cityHabitant.getAge() + "\t|\t Cloned habitant age: " + cityHabitant1.getAge());
-        System.out.println("Original habitant gender: " + cityHabitant.getGender() + "\t|\t Cloned habitant gender: " + cityHabitant1.getGender());
-        System.out.println("Original habitant city: " + cityHabitant.getCityOrigin() + "\t|\t Cloned habitant city: " + cityHabitant1.getCityOrigin());
+        Registry registry = new Registry();
+        Teacher teacher = (Teacher) registry.hireHabitant("Teacher");
+        teacher.setEmployed(true);
+        teacher.setCourse("Mathematics");
+        teacher.setEducation("pHd");
+        teacher.setAge(21);
+
+        Teacher anotherTeacher = (Teacher) registry.hireHabitant("Teacher");
+        anotherTeacher.setCourse("Informatics");
+        anotherTeacher.setCourse("Master's Degree");
+        anotherTeacher.setEmployed(false);
+
+        System.out.println("Original teacher reference: " + teacher + "\t|\t Another teacher reference: " + anotherTeacher);
+        System.out.println("Original teacher age: " + teacher.getAge() + "\t|\t Another teacher age: " + anotherTeacher.getAge());
+        System.out.println("Original teacher gender: " + teacher.getGender() + "\t|\t Another teacher gender: " + anotherTeacher.getGender());
+        System.out.println("Original teacher course: " + teacher.getCourse() + "\t|\t Another teacher gender: " + anotherTeacher.getCourse());
+        System.out.println("Original teacher employment: " + teacher.getEmployed() + "\t|\t Another teacher employment: " + anotherTeacher.getEmployed());
+        System.out.println("Original teacher education: " + teacher.getEducation() + "\t|\t Another teacher education: " + anotherTeacher.getEducation());
     }
 }
