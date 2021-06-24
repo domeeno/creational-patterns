@@ -1,20 +1,35 @@
 package com.create.prototype;
 
+import com.create.builder.LegoCity;
 import com.create.prototype.enums.Gender;
 
 import java.util.ArrayList;
 
-public class CityHabitant {
+public class CityHabitant implements Cloneable{
     private String name;
     private Boolean isEmployed;
     private int age;
     private Gender gender;
+    private LegoCity cityOrigin;
 
-    public CityHabitant(String name, Boolean isEmployed, int age, Gender gender, ArrayList<CityHabitant> relatives) {
+    public CityHabitant(String name, Boolean isEmployed, int age, Gender gender, LegoCity cityOrigin) {
         this.name = name;
         this.isEmployed = isEmployed;
         this.age = age;
         this.gender = gender;
+        this.cityOrigin = cityOrigin;
+    }
+
+    public CityHabitant() {
+    }
+
+    public CityHabitant clone()  {
+        try {
+            return (CityHabitant) super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public String getName() {
@@ -47,5 +62,13 @@ public class CityHabitant {
 
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    public LegoCity getCityOrigin() {
+        return cityOrigin;
+    }
+
+    public void setCityOrigin(LegoCity cityOrigin) {
+        this.cityOrigin = cityOrigin;
     }
 }
