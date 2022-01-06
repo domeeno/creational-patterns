@@ -1,4 +1,4 @@
-package com.create.prototype.enums;
+package com.create.creational.prototype.enums;
 
 public enum Gender {
     FEMALE("female"),

@@ -1,6 +1,6 @@
-package com.create.prototype.citizen;
+package com.create.creational.prototype.citizen;
 
-import com.create.prototype.abstracts.CityHabitant;
+import com.create.creational.prototype.abstracts.CityHabitant;
 
 public class Teacher extends CityHabitant {
     private String course;

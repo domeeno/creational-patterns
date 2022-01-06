@@ -1,4 +1,4 @@
-package com.create.singleton.connection;
+package com.create.creational.singleton;
 
 public class MySQLConnection {
     private static volatile MySQLConnection instance = null;

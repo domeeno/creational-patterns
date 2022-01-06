@@ -1,7 +1,7 @@
-package com.create.prototype.abstracts;
+package com.create.creational.prototype.abstracts;
 
-import com.create.builder.LegoCity;
-import com.create.prototype.enums.Gender;
+import com.create.creational.builder.LegoCity;
+import com.create.creational.prototype.enums.Gender;
 
 public abstract class CityHabitant implements Cloneable{
     private String name;

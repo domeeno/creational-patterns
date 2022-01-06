@@ -1,9 +1,9 @@
-package com.create.prototype.repository;
+package com.create.creational.prototype.repository;
 
-import com.create.prototype.abstracts.CityHabitant;
-import com.create.prototype.citizen.FireFighter;
-import com.create.prototype.citizen.Teacher;
-import com.create.prototype.enums.Gender;
+import com.create.creational.prototype.abstracts.CityHabitant;
+import com.create.creational.prototype.citizen.FireFighter;
+import com.create.creational.prototype.citizen.Teacher;
+import com.create.creational.prototype.enums.Gender;
 
 import java.util.HashMap;
 import java.util.Map;
