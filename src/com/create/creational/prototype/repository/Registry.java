@@ -28,14 +28,16 @@ public class Registry {
 
     private void loadItems() {
         FireFighter fireFighter = new FireFighter();
-        fireFighter.setName("Michael");
+        fireFighter.setFirstName("Michael");
+        fireFighter.setFirstName("Jackson");
         fireFighter.setAge(32);
         fireFighter.setGender(Gender.MALE);
         fireFighter.setFiresExtinguished(3);
         habitants.put("FireFighter", fireFighter);
 
         Teacher teacher = new Teacher();
-        teacher.setName("Dorothy");
+        teacher.setFirstName("Billie");
+        teacher.setLastName("Jean");
         teacher.setAge(35);
         teacher.setGender(Gender.FEMALE);
         habitants.put("Teacher", teacher);

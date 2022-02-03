@@ -4,7 +4,8 @@ import com.create.creational.builder.LegoCity;
 import com.create.creational.prototype.enums.Gender;
 
 public abstract class CityHabitant implements Cloneable{
-    private String name;
+    private String firstName;
+    private String lastName;
     private Boolean isEmployed;
     private int age;
     private Gender gender;
@@ -14,12 +15,20 @@ public abstract class CityHabitant implements Cloneable{
         return super.clone();
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Boolean getEmployed() {
